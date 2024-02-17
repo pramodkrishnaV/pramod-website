@@ -1,0 +1,597 @@
+html, body, *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    /* height: 100vh; */
+    width: 100vw;
+    /* background: aqua; */
+}
+
+.page{
+    min-height: 100vh;
+    width:100vw;
+}
+
+#header{
+    /* background: #20202991; */
+    position: fixed;
+    width: 100%;
+    height:60px;
+    display:flex;
+    justify-content: center;
+    color: white;
+    z-index: 50;
+}
+
+#headerContentContainer{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headerTitle{
+    opacity: 0;
+}
+
+#menuBtn {
+    display:none;
+    cursor:pointer;
+    padding:7px 10px;
+}
+
+#menuBtn:hover {
+    color: #00ffd2;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.open   {
+    transform: translate(0vw, 0) !important;
+ }
+
+ #closeBtn {
+    position: relative;
+    top: 2vh;
+    left: 3vw;
+    padding: 7px 10px;
+    width: 30px;
+    cursor:pointer;
+    display:none;
+ }
+ #closeBtn:hover {
+     color: #00ffd2;
+     background: rgba(142, 142, 142, 0.14);
+ }
+
+#sideMenu {
+    background: rgba(0, 0, 0, 0.774);
+    color: #fff;
+    height: 100vh;
+    width: 70vw;
+    position: fixed;
+    right: 0;
+    display: none;
+    transform:translate(70vw,0);
+    transition: all 0.3s ease-out; 
+    z-index: 100;
+}
+
+#sideMenu ul {
+    padding: 15px 0 15px 0;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    list-style: none;
+}
+
+#sideMenu ul li {
+    padding: 15px;
+    padding-left:   8vw;
+    cursor: pointer;
+}
+
+#sideMenu ul li:hover{
+    background: #0e5856de;
+}
+
+#sideMenu ul li:active{
+    background: #0b4644de;
+}
+
+#mainMenu{
+
+}
+
+#mainMenu ul{
+
+}
+
+#mainMenu ul li{
+    display: inline;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#mainMenu ul li:hover{
+    background: #0e5856de;
+}
+
+#mainMenu ul li:active{
+    background: #0b4644de;
+}
+
+.blur {
+    filter: blur(3.5px);
+}
+
+.show {
+    display:block !important;
+}
+.hide {
+    display:none !important;
+}
+
+
+.homePage{
+    background: #4CB8C4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#homePageContentContainer{
+    height: calc(100vh - 60px);
+    /* background: violet; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+#homePageContentInnerContainer{
+    /* background: brown; */
+    display: flex;
+    padding:40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.helloText{
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
+    
+}
+
+.introText{
+    margin-bottom:10px;
+}
+
+.introTextLineOne{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    /* font-style: italic; */
+}
+
+.nameText{
+    font-weight: 900;
+}
+
+.introTextLineTwo{
+    font-size:24px;
+    font-weight: 100;
+}
+.introTextLineTwo #designMediaText{
+    font-weight: 900;
+    font-size: 1.15em;
+}
+
+#designMediaText{
+    width:110px;
+    display: inline-block;
+}
+
+
+.worksPage{
+    background: url("./blur-cellphone-close-up-196644_drim_grad_1.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+.downArrowContainer{
+    text-align: center;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+
+.headerFillerDiv{
+    height:60px;
+}
+
+#worksPageContentContainer{
+    width:80%;
+    /* border:1px solid navy; */
+    min-height: calc(100vh - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageHeaderContainer{
+    height:80px;
+    display: flex;
+    align-items: center;
+}
+.pageHeader{
+    font-size:45px;
+    font-family: 'Pacifico', cursive;
+    color:white;
+}
+
+.workItemsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:100%;
+    /* align-items: flex-start; */
+}
+
+.workItem{
+    width:250px;
+    height:200px;
+    /* border: 1px solid magenta; */
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px #00000094;
+    border-radius: 2px;
+    /* background-image: url("https://thumbs.dreamstime.com/b/pink-orange-smooth-gradient-background-colorful-vibrant-backdrop-your-web-print-projects-99854411.jpg"); */
+}
+
+.workItem img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index : 1;
+}
+
+.workItemOverlay{
+    width:100%;
+    height:100%;
+    z-index: 2;
+    background: #00000035;
+    
+    transition: background-color 0.3s linear;
+    -webkit-transition: background-color 0.3s linear; /* for Safari & Chrome */
+}
+
+.projectTitle{
+    font-size:1.2em;
+    text-shadow: -1px 1px rgba(139, 138, 138, 0.89)
+}
+
+.viewProject{
+    /* transition: display 0.2s linear;
+    -webkit-transition: display 0.2s linear; */
+}
+
+.workItem:hover .workItemOverlay{
+    background: #00000095;
+}
+
+.workItemTextContainer .viewProject{
+    display: none;
+    /* -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s; */
+}
+
+.workItem:hover .viewProject{
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.workItem:hover .projectTitle{
+    display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.workItemTextContainer{
+    position: absolute;
+    color:white;
+    z-index: 3;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+
+
+
+.contactPage{
+    /* width:100%; */
+    /* height: 300px; */
+    /* background: darkcyan; */
+    background: #778be4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, #52bac5, #778be8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #52bac5, #778be8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contactContainer{
+    width:80%;
+    /* background: yellow; */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contactPic{
+    border-radius:100vw;
+    width:200px;
+    height:200px;
+}
+
+.contactItemContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-top: 20px;
+}
+
+
+.contactIcon{
+    color:white;
+    font-size: 2em;
+    text-rendering: auto;
+    margin-right: 15px;
+}
+
+
+/* 
+.page{
+    filter: blur(2px);
+} */
+
+.workItemModal{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    background: #00000099;
+    z-index:20;
+    top:0px;
+    left:0px;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display:none;
+
+
+}
+
+
+.workItemModalInnerContainer{
+    display:none;
+    width: 80vw;
+    height: 80vh;
+    /* max-height: 60vh; */
+    background: white;
+    padding:25px;
+}
+
+.modalHead{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.modalHead h2{
+    font-size:2em;
+}
+
+.modalContent{
+    overflow-y: scroll;
+    height:85%;
+    width:95%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.modalContent .primaryImage{
+    /* max-width:100%; */
+    width:70%
+    /* max-height: 100%; */
+}
+
+.modalContent p{
+    width:70%;   
+    text-align: justify;
+}
+
+
+
+
+
+
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-width : 1024px) and (min-width : 767px) {
+    .modalHead h2{
+        font-size:1.2em;
+    }
+
+    .workItemModalInnerContainer{
+        width:92vw;
+        height: 85vh;
+    }
+
+    .modalContent{
+        height:90%;
+    }
+
+    .modalContent p , .modalContent .primaryImage{
+        width:90%;
+    }
+
+    .modalCloseButtonContainer{
+        font-size: 1.5em;
+    }
+
+    #menuBtn {
+        display:none;
+    }   
+
+    #sideMenu {
+        display: none; 
+    } 
+  
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 768px) and (min-width : 641px) {
+    .modalContent p , .modalContent .primaryImage{
+        width:90%;
+    }
+
+    #homePageContentInnerContainer{
+        padding-left:5px;
+        padding-right:5px;
+        width:98%;
+    }
+    .workItem{
+        width: 600px;
+        height:350px;
+    }
+
+    .workItemModalInnerContainer{
+        width:92vw;
+        height: 85vh;
+    }
+
+    .modalContent{
+        height:90%;
+    }
+
+    .modalContent p , .modalContent .primaryImage{
+        width:90%;
+    }
+
+    .modalCloseButtonContainer{
+        font-size: 1.5em;
+    }
+
+    #menuBtn {
+        display:none;
+    }
+
+    #sideMenu {
+        display: none; 
+    }
+       
+}
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
+@media only screen and (max-width : 640px) {
+    #homePageContentInnerContainer{
+        padding:5px;
+    }
+    #enjoyText{
+        display: block;
+        margin-top: 6px;
+    }
+
+    .introTextLineTwo{
+        text-align: center;
+        font-size: 20px;
+    }
+    #designMediaText{
+        width: 90px;
+        text-align:left;
+        padding-left: 2px;
+    }
+
+    .workItemModalInnerContainer{
+        width:98vw;
+        height: 85vh;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 60px;
+    }
+
+    .modalContent{
+        height:93%;
+        margin-left: auto;
+        margin-right: auto;
+        width:95%;
+    }
+
+    .modalHead{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modalHead h2{
+        font-size: 1.1em;
+    }
+
+    .modalContent p{
+        font-size:0.9em;
+    }
+
+    .modalContent p , .modalContent .primaryImage{
+        width:94%;
+    }
+
+    .modalCloseButtonContainer{
+        font-size: 1.5em;
+    }
+
+
+    .contactItemContainer{
+        width:210px;
+    }
+
+    #mainMenu {
+        display:none;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    #sideMenu {
+        display: block; 
+    }
+    
+}
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width : 321px) {}

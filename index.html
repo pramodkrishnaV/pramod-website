@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pramod Krishna</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="animate.changethewords.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="headerContentContainer">
+            <div id="headerTitle">
+                Pramod Krishna
+            </div>
+            <div id="menuBtn" onclick="menuToggle()"><i class="fas fa-bars"></i></div>
+            <div id="mainMenu">
+                <ul>
+                    <li onclick="onMenuItemClick('homePage')">Home</li>
+                    <li onclick="onMenuItemClick('worksPage')">Works</li>
+                    <li onclick="onMenuItemClick('contactPage')">Contact</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="sideMenu">
+        <div id="closeBtn" onclick="menuToggle()"><i class="fas fa-times"></i></div>
+        <ul>
+            <li onclick="onMenuItemClick('homePage'); menuToggle()">Home</li>
+            <li onclick="onMenuItemClick('worksPage'); menuToggle()">Works</li>
+            <li onclick="onMenuItemClick('contactPage'); menuToggle()">Contact</li>
+        </ul>
+    </div>
+    <div class="page homePage" id="homePage">
+        <div id="homePageContentContainer">
+            <div id="homePageContentInnerContainer">
+                <h1 class="helloText">hello!</h1>
+                <h3 class="introText introTextLineOne"> My name is
+                    <span class="nameText">PRAMOD KRISHNA</span>
+                </h3>
+                <h4 class="introText introTextLineTwo">I am a UI / UX designer, 
+                    <span id="enjoyText">I enjoy designing for
+                        <span data-id="1">WEB</span>
+                        <span data-id="2">MOBILE</span>
+                        <span data-id="3">PRINT</span>
+                    </span>
+                </h4>
+
+                <!-- <h4 class="introText introTextLineThree">I enjoy designing for
+                    <span class="designMedium">WEB</span>
+                </h4> -->
+            </div>
+        </div>
+
+        <div class="downArrowContainer" onclick="onMenuItemClick('worksPage')">
+            <i class="fa fa-angle-double-down"></i>
+        </div>
+
+    </div>
+
+    <div class="page worksPage" id="worksPage">
+        <div class="headerFillerDiv"></div>
+        <br/>
+        <div id="worksPageContentContainer">
+            <div class="pageHeaderContainer">
+                <h1 class="pageHeader">
+                    Works
+                </h1>
+            </div>
+            <br/>
+            <div class="workItemsContainer">
+                <div class="workItem" id="foodieWI">
+                    <img src="./images/foodieThumb@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">Foodie</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+
+                <div class="workItem" id="expensesWI">
+                    <img src="./images/expenseThumb@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">Expenses</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+                <div class="workItem" id="nipunWI">
+                    <img src="./images/NC_Mockup@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">Nipun Constructions</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+                <div class="workItem" id="atomWI">
+                    <img src="./images/ATOM_Mockup@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">Atom Rides</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+                <div class="workItem" id="vkWI">
+                    <img src="./images/VK_Mockup@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">VK Logo</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+                <div class="workItem" id="tgWI">
+                    <img src="./images/TG_LOGO@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">Techgnostica</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+
+
+                <div class="workItem" id="tqWI">
+                    <img src="./images/Teqvi Logo MockUp@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">TeqVi</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+                <div class="workItem" id="bnWI">
+                    <img src="./images/BN_2@0,25x.jpg" />
+                    <div class="workItemOverlay"></div>
+                    <div class="workItemTextContainer">
+                        <span class="projectTitle">Bharat Net</span>
+                        <span class="viewProject">View Project</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="headerFillerDiv"></div>
+    </div>
+
+    <div class="contactPage" id="contactPage">
+        <div class="headerFillerDiv"></div>
+        <!-- <div class="headerFillerDiv"></div> -->
+        <div class="contactContainer">
+            <div class="pageHeaderContainer">
+                <h1 class="pageHeader">Get In Touch</h1>
+            </div>
+            <br/>
+            <!-- <img class="contactPic" src="./pramod.jpg" /> -->
+            <!-- <h2>Pramod Krishna Vellampalli</h2> -->
+            <div class="contactItemContainer">
+                <div class="contactIcon">
+                    <i class="fa fas fa-map-marker-alt" aria-hidden="true"></i>
+                </div>
+
+                <p>1E17, Isha Misty Green, Whitefield, Bangalore</p>
+            </div>
+
+            <div class="contactItemContainer">
+                <div class="contactIcon">
+                    <i class="fa fa-phone fa-flip-horizontal" aria-hidden="true"></i>
+                </div>
+                <p>+91-8500906806</p>
+            </div>
+
+            <div class="contactItemContainer">
+                <div class="contactIcon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <p>pramod895@gmail.com</p>
+            </div>
+        </div>
+        <div class="headerFillerDiv"></div>
+    </div>
+
+
+
+
+
+    <div class="workItemModal" id="workItemModal">
+        <div class="workItemModalInnerContainer" id="nipunWI_POP">
+            <div class="modalHead">
+                <h2>Nipun Constructions</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+                    Proprietor of Nipun Construction Hyderabad, Venu, approached me for the initial branding and business card design for his
+                    company. This project is very important for him as this impacts his company's market presense and brand
+                    value. He wants it to be simple and professional.
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/NC_Mockup@0,5x_cropped_back.jpg" />
+                <br/>
+                <img class="primaryImage" src="./images/NC_Mockup@0,5x_cropped_front.jpg">
+
+            </div>
+
+        </div>
+
+
+        <div class="workItemModalInnerContainer" id="foodieWI_POP">
+            <div class="modalHead">
+                <h2>Foodie - Food delivery app</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+                    This is an user interface design project for a food delivery startup in Khammam, a city in Telangana.
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/foodie2.jpg" />
+                <br/>
+                <img class="primaryImage" src="./images/foodie3.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/foodie4.jpg" />
+                <br/>
+                <img class="primaryImage" src="./images/foodie5.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/foodie6.jpg" />
+                <br/>
+                <img class="primaryImage" src="./images/foodie7.jpg" />
+
+            </div>
+        </div>
+
+
+        <div class="workItemModalInnerContainer" id="expensesWI_POP">
+            <div class="modalHead">
+                <h2>Expenses - Expenditure tracking app</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+                    This is a personal project, I lose track of my expenses and will be left with no clue how all the money is vanished. So,
+                    I designed this app and started developing it in AngularJS. Development is stil in progress and will
+                    make the source public once finished.
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/expenses1.jpg" />
+                <br/>
+                <img class="primaryImage" src="./images/expenses2.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/expenses3.jpg" />
+                <br/>
+                <img class="primaryImage" src="./images/expenses4.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/expenses5.jpg" />
+
+
+            </div>
+        </div>
+
+        <div class="workItemModalInnerContainer" id="atomWI_POP">
+
+            <div class="modalHead">
+                <h2>Atom Rides - Logo design</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+                    One of my friends was starting a motorcyle rental business and wanted a logo for a presentation. I got only a few hours to
+                    work on this end to end as he was in a hurry.
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/ATOM_Mockup@0,5x.jpg" />
+            </div>
+        </div>
+
+
+        <div class="workItemModalInnerContainer" id="vkWI_POP">
+
+            <div class="modalHead">
+                <h2>Vinod krishna - Logo & Website design</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/VK_Mockup@0,5x.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/vk_web1@0,5x.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/vk_web2@0,5x.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/vk_web3@0,5x.jpg" />
+            </div>
+        </div>
+
+
+        <div class="workItemModalInnerContainer" id="tgWI_POP">
+
+            <div class="modalHead">
+                <h2>Techgnostica - Tech Fest Logo</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/TG_Logo@0,5x.jpg" />
+            </div>
+        </div>
+
+        <div class="workItemModalInnerContainer" id="tqWI_POP">
+
+            <div class="modalHead">
+                <h2>TeqVi - Logo Design</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/Teqvi Logo MockUp@0,5x.jpg" />
+            </div>
+        </div>
+
+
+        <div class="workItemModalInnerContainer" id="bnWI_POP">
+
+            <div class="modalHead">
+                <h2>Bharat Net - Logo Design</h2>
+                <div class="modalCloseButtonContainer">
+                    <i class="far fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="modalContent">
+                <p>
+
+                </p>
+                <br />
+                <img class="primaryImage" src="./images/BN_1@0,5x.jpg" />
+                <br />
+                <img class="primaryImage" src="./images/BN_2@0,5x.jpg" />
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- <div id="changethewords">I love
+        <span data-id="1">Code</span>
+        <span data-id="2">Spaghetti</span>
+        <span data-id="3">Cats</span>
+        <span data-id="4">Bikes</span>
+        <span data-id="5">People</span>
+        <span data-id="6">Me</span>
+        <span data-id="7">You</span>
+      </div> -->
+
+    <script src="jquery.changethewords.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#enjoyText").changeWords({
+          time: 1500,
+          animate: "jello",
+          selector: "span",
+          repeat: true // false
+        });
+      });
+    </script>
+
+</body>
+
+</html>
